@@ -11,11 +11,11 @@ VERSION="5.2.1"
 (cd $SOURCE && git checkout v$VERSION)
 #  tags/v$VERSION
 
-node ./compile-tiddlywiki-production.js $SOURCE $TARGET-client $VERSION client
-node ./compile-tiddlywiki-production.js $SOURCE $TARGET-server $VERSION server
-
 rm -rf $TARGET-client
 rm -rf $TARGET-server
+
+node ./compile-tiddlywiki-production.js $SOURCE $TARGET-client $VERSION client
+node ./compile-tiddlywiki-production.js $SOURCE $TARGET-server $VERSION server
 
 cp -vR $SOURCE/tiddlywiki.js $SOURCE/license $SOURCE/licenses $SOURCE/boot $TARGET-client
 cp -vR $SOURCE/tiddlywiki.js $SOURCE/license $SOURCE/licenses $SOURCE/boot $TARGET-server
