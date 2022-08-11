@@ -2,7 +2,7 @@
 
 SOURCE="TiddlyWiki5-Jermolene"
 TARGET="tiddlywiki-production"
-VERSION="5.2.1"
+VERSION="5.2.3"
 
 rm -rf $TARGET-client
 rm -rf $TARGET-server
