@@ -1,17 +1,17 @@
 #!/bin/bash
 # INSTRUCTIONS
-# Below: Change target and version as desired 
+# Below: Change target and version as desired
 # In WSL: verify NPM whoami then run this file IN WSL
 # *** THE NEW BUILD WILL BE PUBLISHED ***
 SOURCE="TiddlyWiki5-Jermolene"
-TARGET="5-2-2"
-VERSION="5.2.2"
+TARGET="5-2-3"
+VERSION="5.2.3"
 
 ([ -d "$TARGET-client" ] || [ -d "$TARGET-server" ]) && echo "Output folder already exists" && exit 1
 
 rm -rf $SOURCE
 git clone https://github.com/Jermolene/TiddlyWiki5 $SOURCE
-(cd $SOURCE && git checkout v$VERSION) 
+(cd $SOURCE && git checkout v$VERSION)
 #  tags/v$VERSION
 
 node ./compile-tiddlywiki-production.js $SOURCE $TARGET-client $VERSION client
