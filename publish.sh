@@ -1,20 +1,24 @@
 #!/bin/bash
 
-./compile.sh
+# ./compile.sh
 
-(git add --all && git commit -m 'update tiddlywiki-production' && git pull)
+(git add --all && git commit -m 'update tiddlywiki-production' && git push)
+
+./update-global-plugins.sh
 
 (cd /usr/local/lib/node_modules/tiddlyserver/node_modules && git pull)
+(cd /usr/local/lib/node_modules/tiddlyserver/node_modules/tiddlywiki-production-server/plugins && git pull)
 
 echo '
 **************************
 
-cd /usr/local/lib/node_modules/tiddlyserver/node_modules && ./update.sh
+updae zy server
 
 **************************
 '
 
 ssh zy "
-cd /usr/local/lib/node_modules/tiddlyserver/node_modules
-./update.sh
+(cd /usr/local/lib/node_modules/tiddlyserver/node_modules && /usr/local/git/bin/git pull)
+(cd /usr/local/lib/node_modules/tiddlyserver/node_modules/tiddlywiki-production-server/plugins && /usr/local/git/bin/git pull pull)
+pm2 restart wikis
 "
