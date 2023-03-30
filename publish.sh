@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# ./compile.sh
+./compile.sh
 
 (git add --all && git commit -m 'update tiddlywiki-production' && git push)
 
