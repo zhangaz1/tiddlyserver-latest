@@ -1,7 +1,9 @@
 #!/bin/bash
 
-(cd ./../tw-plugins-global && rm -rf tiddlywiki)
+GLOBAL="/Users/zhangaz1/workspace/myPrivate/zhangaz1-pro/tiddlywikis/global/plugins"
 
-cp -R tiddlywiki-production-server/plugins/tiddlywiki/ ./../tw-plugins-global/tiddlywiki
+(cd $GLOBAL && rm -rf tiddlywiki)
 
-(cd ./../tw-plugins-global && git add --all && git commit -m 'update tiddlywiki-plugins' && git push)
+cp -R tiddlywiki-production-server/plugins/tiddlywiki/ $GLOBAL/tiddlywiki
+
+(cd $GLOBAL && git add --all && git commit -m 'update tiddlywiki-plugins' && git push)
