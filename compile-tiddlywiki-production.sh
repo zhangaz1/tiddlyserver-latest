@@ -5,7 +5,7 @@
 # *** THE NEW BUILD WILL BE PUBLISHED ***
 SOURCE="TiddlyWiki5-Jermolene"
 TARGET="5-2-3"
-VERSION="5.2.3"
+VERSION="5.3.1"
 
 ([ -d "$TARGET-client" ] || [ -d "$TARGET-server" ]) && echo "Output folder already exists" && exit 1
 
