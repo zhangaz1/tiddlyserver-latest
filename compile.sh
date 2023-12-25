@@ -9,7 +9,7 @@ rm -rf $TARGET-server
 
 ([ -d "$TARGET-client" ] || [ -d "$TARGET-server" ]) && echo "Output folder already exists" && exit 1
 
-# rm -rf $SOURCE
+# rm -rf $SOURCEgss
 # git clone https://github.com/Jermolene/TiddlyWiki5 $SOURCE
 (cd $SOURCE && git checkout v$VERSION)
 #  tags/v$VERSION
