@@ -4,7 +4,7 @@
 
 (git add --all && git commit -m 'update tiddlywiki-production' && git push)
 
-# ./update-global-plugins.sh
+./update-global-plugins.sh
 
 ./update.sh
 
