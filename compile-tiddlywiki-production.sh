@@ -4,8 +4,8 @@
 # In WSL: verify NPM whoami then run this file IN WSL
 # *** THE NEW BUILD WILL BE PUBLISHED ***
 SOURCE="TiddlyWiki5-Jermolene"
-TARGET="5-3-4"
-VERSION="5.3.4"
+TARGET="latest"
+VERSION="5.3.5"
 
 ([ -d "$TARGET-client" ] || [ -d "$TARGET-server" ]) && echo "Output folder already exists" && exit 1
 
